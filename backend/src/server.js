@@ -33,5 +33,11 @@ app.use('/api/vehicles', require('./routes/vehicleRoutes'));
 app.use((req, res) => res.status(404).json({ success: false, error: 'Route not found' }));
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Craze Vibes Trips API running on port ${PORT}`));
+// Only start a listening server when run directly (local dev / traditional hosting).
+// On Vercel, api/index.js imports `app` and exports it as a serverless function instead.
+if (require.main === module) {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => console.log(`Craze Vibes Trips API running on port ${PORT}`));
+}
+
+module.exports = app;
