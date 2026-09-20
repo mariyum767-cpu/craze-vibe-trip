@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1a2420;
+  background-color: #f7f8f6;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary {
+  @apply bg-forest hover:bg-forest-dark text-white font-semibold px-6 py-3 rounded-full transition-colors;
+}
+.btn-outline {
+  @apply border-2 border-white text-white font-semibold px-6 py-3 rounded-full hover:bg-white hover:text-forest transition-colors;
+}
+.btn-sunset {
+  @apply bg-sunset hover:brightness-95 text-forest-dark font-bold px-6 py-3 rounded-full transition;
+}
+.btn-secondary {
+  @apply bg-gray-100 hover:bg-gray-200 text-forest-dark font-medium px-4 py-2.5 rounded-lg transition-colors text-sm;
+}
+.section {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16;
+}
+.card {
+  @apply bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden border border-black/5;
+}
+.input {
+  @apply w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-forest/40 focus:border-forest;
+}
+.label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
