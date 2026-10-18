@@ -6,6 +6,8 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "backend/api/index.js" },
+    { "src": "/tours/([^/]+)", "dest": "frontend/tours/[id]?nxtPid=$1" },
+    { "src": "/destinations/([^/]+)", "dest": "frontend/destinations/[id]?nxtPid=$1" },
     { "src": "/(.*)", "dest": "frontend/$1" }
   ]
 }
